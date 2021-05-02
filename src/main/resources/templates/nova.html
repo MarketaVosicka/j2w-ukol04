@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nová vizitka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<div class="detail">
+    <h2 class="h2">Přidat novou vizitku</h2>
+    <form class="form-nova" th:action="@{/nova}" method="post">
+
+        <div>
+            <label for="jmeno" class="form-label">Jméno</label>
+            <input id="jmeno" name="jmeno" class="form-input" type="text" placeholder="Jan Novák"/>
+        </div>
+        <div>
+            <label for="firma" class="form-label">Firma</label>
+            <input id="firma" name="firma" class="form-input" type="text" placeholder="Czechitas"/>
+        </div>
+        <div>
+            <label for="ulice" class="form-label">Ulice</label>
+            <input id="ulice" name="ulice" class="form-input" type="text" placeholder="Václavské náměstí 1"/>
+        </div>
+        <div>
+            <label for="obecPSC" class="form-label">Město PSČ</label>
+            <input id="obecPSC" name="obecPsc" class="form-input" type="text" placeholder="Praha 1 11000"/>
+        </div>
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" type="text" placeholder="jan.novak@czechitas.cz"/>
+        </div>
+        <div>
+            <label for="telefon" class="form-label">Telefon</label>
+            <input id="telefon" name="telefon" class="form-input" type="text" placeholder="+420123456789"/>
+        </div>
+        <div>
+            <label for="web" class="form-label">Web</label>
+            <input id="web" name="web" class="form-input" type="text" placeholder="www.czechitas.cz"/>
+        </div>
+        <div>
+            <button type="submit" class="btn">Přidat vizitku</button>
+        </div>
+    </form>
+    <nav>
+        <a href="/">◂ zpět na seznam</a>
+    </nav>
+</div>
+</body>
+</html>
